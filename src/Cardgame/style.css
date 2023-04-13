@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background: url('../../public/game.jpg')no-repeat fixed center /cover;
+    height: 100vh;
+}
+
+.wrapperhead {
+    padding-top: 18.5rem;
+    padding-left: 15rem;
+    color: #fff;
+}
+
+.wrapperhead button {
+    margin-left: 17rem;
+    width: 20%;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.gamewrapper {
+    background: linear-gradient(to bottom, #000000, #0f9b0f);
+    height: 100vh;
+    display: flex;
+}
+
+.gamehead {
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(to bottom, #e43a15, #e65245);
+    height: 500px;
+    width: 60%;
+    margin: 5rem auto;
+    padding: 1rem 1rem;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 120px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    margin: 0rem 0.25rem;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: hsl(103, 30%, 88%);
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-back img{
+    width: 120px;
+    height: 200px;
+  }
