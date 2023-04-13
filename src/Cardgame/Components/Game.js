@@ -57,8 +57,8 @@ function Game() {
       image: six,
       id: 12
     }]
-    
-  const [flip, setFlip] = useState("")
+
+  const [flip, setFlip] = useState(null)
 
   for (let i = data.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -66,16 +66,16 @@ function Game() {
   }
 
   function handleflip(index) {
-    if (handleflip === null) {
-      if (flip === null) {
-        setFlip(index)
-      }
-      else {
-        setFlip(null)
-      }
+    if (flip === null) {
+      setFlip(index)
+
+    }
+    else {
+      setFlip(null)
     }
   }
 
+  console.log(flip)
 
   return (
     <>
@@ -85,13 +85,13 @@ function Game() {
             data.map((element, index) => {
               return (
                 <>
-                  <div class="flip-card" key={index} onClick={handleflip(index)}>
+                  <div class="flip-card" key={index} onClick={() => { handleflip(index) }}>
                     <div class="flip-card-inner" style={{ transform: index === flip ? 'rotateY(180deg)' : 'none' }}>
                       <div class="flip-card-front">
                         <h1>Check Image</h1>
                       </div>
                       <div class="flip-card-back">
-                        <img src={element} alt="Avatar"></img>
+                        <img src={element.image} alt="Avatar"></img>
                       </div>
                     </div>
                   </div>
